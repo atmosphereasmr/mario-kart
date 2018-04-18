@@ -1,0 +1,131 @@
+.App {
+  background-color: skyblue;
+  width: 100vw;
+  height: 800px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-flow: column;
+}
+
+.bottom-line {
+  width: 100%;
+  height: 25px;
+  background-color: grey;
+}
+
+.road {
+  width: 100%;
+  height: 300px;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.green-horizon {
+  background-color: green;
+  width: 100%;
+  height: 200px;
+}
+
+.bullet-bill {
+  width: 100px;
+  height: 100px;
+  background-image: url('http://image.ibb.co/kjUk1n/imageedit_1_2775147024.png');
+  background-repeat: no-repeat;
+  animation: bill 7s 0s infinite linear;
+  position: absolute;
+  top: 50px;
+  right: 600px;
+  z-index: 2;
+}
+
+.big-hill {
+  width: 400px;
+  height: 400px;
+  background-image: url('http://image.ibb.co/gjJZu7/152393295130390174.png');
+  background-repeat: no-repeat;
+  animation: hill 14s 0s infinite linear;
+  position: absolute;
+  top: 83px;
+  right: 900px;
+  z-index: 1;
+}
+
+.flower {
+  width: 50px;
+  height: 50px;
+  background-image: url('http://iconbug.com/data/61/256/f21ad326471b4a8838d62d0dd05ae84e.png');
+  background-repeat: no-repeat;
+  animation: hill 5s 0s infinite linear;
+  background-size: cover;
+  position: absolute;
+  top: 350px;
+  right: 600px;
+  z-index: 1;
+}
+
+.shell {
+  width: 100px;
+  height: 100px;
+  background-image: url('https://vignette.wikia.nocookie.net/mariokart/images/9/9b/Green_Shell.png/revision/latest?cb=20130527004432');
+  background-repeat: no-repeat;
+  animation-name: hill, shell;
+  animation-duration: 5s, 1s;
+  animation-iteration-count: infinite;
+  background-size: contain;
+  position: absolute;
+  top: 650px;
+  right: 600px;
+  z-index: 1;
+}
+
+.mario {
+  width: 200px;
+  height: 200px;
+  background-image: url('https://img00.deviantart.net/6189/i/2014/169/a/0/what_if_super_mario_kart_was_like_mario_kart_8__by_djtoast3-d7mx7nc.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation-name: mario, motor;
+  animation-duration: 8s, 0.25s;
+  animation-iteration-count: infinite;
+  position: absolute;
+  top: 550px;
+  left: 200px;
+  z-index: 1;
+}
+
+@keyframes bill {
+  0% {transform: translateX(-1000px)}
+  100% {transform: translateX(1000px)}
+}
+
+@keyframes hill {
+  0% {transform: translateX(1400px)}
+  100% {transform: translateX(-1000px)}
+}
+
+@keyframes flower {
+  0% {transform: translateX(1200px)}
+  100% {transform: translateX(-1000px)}
+}
+
+@keyframes mario {
+  0% {transform: translate(0, 0)}
+  25% {transform: translateX(200px)}
+  50% {transform: translate(100px, -100px)}
+  75% {transform: translate(200px, -100px)}
+  100% {transform: translate(0px, 0px)}
+}
+
+@keyframes motor {
+  0% {background-position-y: 0px}
+  100% {background-position-y: 3px}
+}
+
+@keyframes shell {
+  0% {background-position-y: 0px}
+  100% {background-position-y: 20px}
+}
